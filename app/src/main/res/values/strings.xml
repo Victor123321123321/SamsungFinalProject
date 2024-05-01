@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SamsungFinalProject</string>
+    <string name="theorem_content">Theorem Content</string>
+    <string name="theorem_title">Theorem Title</string>
 </resources>

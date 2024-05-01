@@ -4,6 +4,7 @@ public class Theorem {
     private int id;
     private String title;
     private String content;
+    private String imagePath;
 
     public Theorem() {
     }
@@ -11,6 +12,14 @@ public class Theorem {
     public Theorem(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public int getId() {
