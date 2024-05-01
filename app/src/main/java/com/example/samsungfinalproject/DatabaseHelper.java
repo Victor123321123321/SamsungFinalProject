@@ -47,17 +47,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Метод для добавления новой теоремы в базу данных
     // Вставьте этот код в ваш класс DatabaseHelper
-    public long addTheorem(String title, String content) {
+    public boolean addTheorem(String title, String content, String imagePath) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(KEY_TITLE, title);
         values.put(KEY_CONTENT, content);
+        values.put(COLUMN_IMAGE, imagePath);
 
         long result = db.insert(TABLE_THEOREMS, null, values);
         db.close();
-        return result;
+
+        return result != -1;
     }
+
 
 
     // Метод для получения списка всех теорем из базы данных
